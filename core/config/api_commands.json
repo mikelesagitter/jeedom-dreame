@@ -1,0 +1,169 @@
+{
+  "local": {
+    "endpoint": {
+      "protocol": "tcp",
+      "port": 54321,
+      "description": "MIIO protocol over TCP"
+    },
+    "commands": [
+      {
+        "method": "start_clean",
+        "label": "Démarrer le nettoyage",
+        "params": []
+      },
+      {
+        "method": "stop_clean",
+        "label": "Arrêter le nettoyage",
+        "params": []
+      },
+      {
+        "method": "home",
+        "label": "Retour à la base",
+        "params": []
+      },
+      {
+        "method": "locate",
+        "label": "Localiser (bip)",
+        "params": []
+      },
+      {
+        "method": "reset_mainbrush_life",
+        "label": "Reset brosse principale",
+        "params": []
+      },
+      {
+        "method": "reset_filter_life",
+        "label": "Reset filtre",
+        "params": []
+      },
+      {
+        "method": "reset_sidebrush_life",
+        "label": "Reset brosse latérale",
+        "params": []
+      },
+      {
+        "method": "play_sound",
+        "label": "Jouer un son",
+        "params": []
+      },
+      {
+        "method": "fan_speed",
+        "label": "Lecture vitesse ventouse",
+        "params": []
+      },
+      {
+        "method": "set_property_cleaning_mode",
+        "label": "Régler puissance aspiration",
+        "params": [
+          "cleaning_mode"
+        ]
+      },
+      {
+        "method": "waterflow",
+        "label": "Lecture état eau",
+        "params": []
+      },
+      {
+        "method": "set_property_water_flow",
+        "label": "Régler débit eau",
+        "params": [
+          "water_flow"
+        ]
+      },
+      {
+        "method": "move_manual",
+        "label": "Pilotage manuel (avancer/rotation)",
+        "params": [
+          "angle_or_distance"
+        ]
+      },
+      {
+        "method": "set_voice",
+        "label": "Changer pack vocal",
+        "params": [
+          "voice_id",
+          "url",
+          "md5",
+          "size"
+        ]
+      }
+    ]
+  },
+  "cloud": {
+    "base_url": "https://cn.iot.dreame.tech:13267",
+    "endpoints": {
+      "auth_token": "/dreame-auth/oauth/token",
+      "refresh_token": "/dreame-auth/oauth/token",
+      "device_list": "/dreame-user-iot/iotuserbind/device/listV2",
+      "device_unbind": "/dreame-user-iot/iotuserbind/device/unbind",
+      "send_command": "/dreame-iot-com-10000/device/sendCommand"
+    },
+    "commands": [
+      {
+        "method": "start_clean",
+        "label": "Démarrer le nettoyage",
+        "params": []
+      },
+      {
+        "method": "stop_clean",
+        "label": "Arrêter le nettoyage",
+        "params": []
+      },
+      {
+        "method": "home",
+        "label": "Retour à la base",
+        "params": []
+      },
+      {
+        "method": "locate",
+        "label": "Localiser (bip)",
+        "params": []
+      },
+      {
+        "method": "reset_mainbrush_life",
+        "label": "Reset brosse principale",
+        "params": []
+      },
+      {
+        "method": "reset_filter_life",
+        "label": "Reset filtre",
+        "params": []
+      },
+      {
+        "method": "reset_sidebrush_life",
+        "label": "Reset brosse latérale",
+        "params": []
+      },
+      {
+        "method": "play_sound",
+        "label": "Jouer un son",
+        "params": []
+      },
+      {
+        "method": "set_property",
+        "label": "Régler puissance aspiration ou débit eau",
+        "params": [
+          "cleaning_mode",
+          "water_flow"
+        ]
+      },
+      {
+        "method": "move",
+        "label": "Pilotage manuel (avancer/rotation)",
+        "params": [
+          "angle_or_distance"
+        ]
+      },
+      {
+        "method": "set_voice",
+        "label": "Changer pack vocal",
+        "params": [
+          "voice_id",
+          "url",
+          "md5",
+          "size"
+        ]
+      }
+    ]
+  }
+}

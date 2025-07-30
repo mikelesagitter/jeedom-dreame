@@ -1,0 +1,26 @@
+{
+  "id": "dreame",
+  "name": "Dreame",
+  "description": {
+    "fr_FR": "Plugin Jeedom pour aspirateur Dreame (local et cloud)",
+    "en_US": "Jeedom plugin for Dreame vacuum cleaner (local and cloud)"
+  },
+  "licence": "GPL",
+  "author": "VotreNom",
+  "require": ">=4.0",
+  "category": "connectedobjects",
+  "changelog": "",
+  "documentation": "",
+  "language": [
+    "fr_FR",
+    "en_US"
+  ],
+  "compatibility": [
+    "rpi",
+    "smart",
+    "docker",
+    "v4"
+  ],
+  "hasDependency": false,
+  "hasOwnDeamon": false
+}

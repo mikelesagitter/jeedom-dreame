@@ -1,0 +1,55 @@
+<div class="eqLogic-widget eqLogic allowResize" style="width: 160px;border:#border#;border-radius:#border-radius#;background-color: #background-color#;color: #color#;#style#;min-height:150px;" data-eqLogic_id="#id#" data-eqLogic_uid="#uid#" data-version="#version#">
+  <span class="statusCmd" style="position : absolute;left : 5px; width : 30px;z-index: 1030;"></span>
+  <i class='fa fa-refresh pull-right cursor refresh' style="margin-top: 3px;margin-right: 3px;"></i>
+  <span class="cmd cmd-widget" data-cmd_id="#refresh_id#" style="display:none;"></span>
+  <center style="#hideEqLogicName#">#name_display# <span style="font-size: 0.85em;position: relative;top:-2px;">#object_name#</span></center>
+  <center>
+    <img src="#img_phase#" width="100" title ="#str_phase#" class="ui-sortable-handle"/><br />
+    <span class="cmd" data-type="action" data-subtype="other" data-cmd_id="#start_id#">
+      <a class="ui-btn ui-mini ui-btn-inline action cmdName" style="background-color:#cmdColor# !important;border-color : transparent !important;" title="#str_start#">
+        <span class="fa fa-play" aria-hidden="true"></span>
+      </a>
+    </span>
+    <span class="cmd" data-type="action" data-subtype="other" data-cmd_id="#stop_id#">
+      <a class="ui-btn ui-mini ui-btn-inline action cmdName" style="background-color:#cmdColor# !important;border-color : transparent !important;" title="#str_stop#">
+        <span class="fa fa-stop" aria-hidden="true"></span>
+      </a>
+    </span>
+    <span class="cmd" data-type="action" data-subtype="other" data-cmd_id="#dock_id#">
+      <a class="ui-btn ui-mini ui-btn-inline action cmdName" style="background-color:#cmdColor# !important;border-color : transparent !important;" title="#str_dock#">
+        <span class="fa fa-home" aria-hidden="true"></span>
+      </a>
+    </span>
+    <br />
+    <span class="cmd" data-type="action" data-subtype="other" data-cmd_id="#resume_id#">
+      <a class="ui-btn ui-mini ui-btn-inline action cmdName" style="background-color:#cmdColor# !important;border-color : transparent !important;" title="#str_resume#">
+        <span class="fa fa-step-forward" aria-hidden="true"></span>
+      </a>
+    </span>
+    <span class="cmd" data-type="action" data-subtype="other" data-cmd_id="#pause_id#">
+      <a class="ui-btn ui-mini ui-btn-inline action cmdName" style="background-color:#cmdColor# !important;border-color : transparent !important;" title="#str_pause#">
+        <span class="fa fa-pause" aria-hidden="true"></span>
+      </a>
+    </span>
+  </center>
+  <script type="text/javascript">
+    $('.eqLogic[data-eqLogic_id=#id#] .refresh').on('click', function () {
+      jeedom.cmd.execute({id: '#refresh_id#'});
+    });
+    $('.cmd[data-cmd_id=#start_id#]').on('click', function () {
+      jeedom.cmd.execute({id: '#start_id#'});
+    });
+    $('.cmd[data-cmd_id=#stop_id#]').on('click', function () {
+      jeedom.cmd.execute({id: '#stop_id#'});
+    });
+    $('.cmd[data-cmd_id=#dock_id#]').on('click', function () {
+      jeedom.cmd.execute({id: '#dock_id#'});
+    });
+    $('.cmd[data-cmd_id=#resume_id#]').on('click', function () {
+      jeedom.cmd.execute({id: '#resume_id#'});
+    });
+    $('.cmd[data-cmd_id=#pause_id#]').on('click', function () {
+      jeedom.cmd.execute({id: '#pause_id#'});
+    });
+</script>
+</div>
